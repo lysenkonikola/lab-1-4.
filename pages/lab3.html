@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <title>Lab 3</title>
+  </head>
+  <body>
+    <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="/">Головна</a>
+        </li>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Контакти</a></li>
+        <li class="search">
+          <input type="text" placeholder="Пошук">
+          <button>Пошук</button>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="dropdown">
+      <button class="mainmenubtn">Головне меню</button>
+      <div class="dropdown-child">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="../images/imagin ysuk.png" alt="Jonny Silverhand" />
+      <div class="image-text">
+        Це Олександр Усик  . Теперишний козак
+      </div>
+    </div>
+
+    <a href="#" class="scroll-top-button">↑</a>
+  </body>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      var scrollButton = document.querySelector(".scroll-top-button");
+      if (window.pageYOffset > 100) {
+        scrollButton.classList.add("active");
+      } else {
+        scrollButton.classList.remove("active");
+      }
+    });
+
+    document
+      .querySelector(".scroll-top-button")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+  </script>
+</html>
